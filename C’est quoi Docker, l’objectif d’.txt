@@ -1,0 +1,64 @@
+1. C’est quoi Docker, l’objectif d’utiliser Docker ?
+Docker est une plateforme de virtualisation légère qui permet de créer, déployer et gérer des applications dans des conteneurs. L'objectif principal de Docker est de simplifier le développement et le déploiement d'applications en assurant la cohérence entre les environnements de développement, de test et de production.
+
+2. Installer et expliquer l’architecture Docker
+L'architecture de Docker repose sur plusieurs composants clés :
+- Docker Daemon : Le service qui gère les conteneurs.
+- Docker CLI : Interface en ligne de commande pour interagir avec Docker.
+- Images Docker : Modèles de conteneurs.
+- Conteneurs Docker : Instances exécutées basées sur les images.
+Pour installer Docker, il faut suivre les instructions sur le site officiel de Docker pour votre système d'exploitation.
+
+3. C’est hub.docker.com ?
+Hub.docker.com est un registre en ligne où les utilisateurs peuvent stocker et partager leurs images Docker. C’est une plateforme pour trouver des images officielles et communautaires.
+
+4. Comment télécharger une image depuis hub.docker.com ?
+Pour télécharger une image, utilisez la commande suivante dans le terminal :
+docker pull nom_de_l_image
+Par exemple, pour télécharger une image officielle de Nginx :
+docker pull nginx
+
+5. Télécharger Nginx
+Utilisez la commande suivante pour télécharger l'image Nginx :
+docker pull nginx
+
+6. Afficher la liste des images
+Pour afficher toutes les images téléchargées sur votre machine, utilisez :
+docker images
+
+7. Supprimer l’image Nginx
+Pour supprimer l'image Nginx, utilisez la commande :
+docker rmi nginx
+
+8. Télécharger l'image MongoDB
+Pour télécharger l'image MongoDB, utilisez :
+docker pull mongo
+
+9. Construire un conteneur
+Pour créer un conteneur à partir d'une image, utilisez la commande :
+docker run -d --name nom_du_conteneur nom_de_l_image
+Par exemple, pour MongoDB :
+docker run -d --name mongodb mongo
+
+10. Afficher la liste des conteneurs actifs
+Pour afficher les conteneurs en cours d'exécution, utilisez :
+docker ps
+
+11. Arrêter le conteneur
+Pour arrêter un conteneur, utilisez :
+docker stop nom_du_conteneur
+
+12. Afficher la liste totale des conteneurs
+Pour afficher tous les conteneurs (actifs et inactifs), utilisez :
+docker ps -a
+
+13. Redémarrer le conteneur
+Pour redémarrer un conteneur, utilisez :
+docker restart nom_du_conteneur
+
+14. Supprimer le conteneur
+Pour supprimer un conteneur, utilisez :
+docker rm nom_du_conteneur
+
+15. Virtualisation ? Vs Conteneurisation
+La virtualisation implique la création de machines virtuelles avec des systèmes d'exploitation complets, tandis que la conteneurisation utilise le même noyau d'OS pour exécuter plusieurs applications isolées dans des conteneurs. Les conteneurs sont plus légers, plus rapides à démarrer et consomment moins de ressources par rapport aux machines virtuelles.
